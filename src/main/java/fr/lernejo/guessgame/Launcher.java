@@ -10,6 +10,6 @@ public class Launcher {
         HumanPlayer joueur = new HumanPlayer();
         Simulation jeu = new Simulation(joueur);
         jeu.initialize(randomNumber);
-        jeu.loopUntilPlayerSucceed();
+        jeu.loopUntilPlayerSucceed(5);
     }
 }
