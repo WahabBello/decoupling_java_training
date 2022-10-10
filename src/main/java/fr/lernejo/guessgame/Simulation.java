@@ -26,13 +26,13 @@ public class Simulation {
      */
     private boolean nextRound() {
         long chosen_number = player.askNextGuess();
-        logger.log(this.numberToGuess + " \n");
+//        System.out.print(this.numberToGuess);
         if (this.numberToGuess == chosen_number) {
-            logger.log("bravo");
+            logger.log("bravo \n");
             this.nextround = true;
             return true;
         }
-        logger.log("perdu");
+        logger.log("Perdu \n");
         player.respond(this.numberToGuess > chosen_number);
         this.nextround = false;
         return false;
@@ -51,12 +51,12 @@ public class Simulation {
 
         tempsFin = System.currentTimeMillis();
         float seconds = (tempsFin - tempsDebut) / 1000F;
-        logger.log(nbrIt + " \n");
-        logger.log(nbrItMax + " \n");
+//        logger.log(nbrIt + " \n");
+//        logger.log(nbrItMax + " \n");
         if (nbrIt <= nbrItMax) {
-            logger.log("\n Dans le temps du nombre de tentatives");
+            logger.log("Dans le temps du nombre de tentatives\n");
         }else {
-            logger.log("\n Nombre de tentatives dépassées");
+            logger.log("Nombre de tentatives dépassées \n");
         }
 
         logger.log("Temps de l'opération = "+ formater.format(seconds) + " secondes.\n");
