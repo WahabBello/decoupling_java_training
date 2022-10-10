@@ -42,7 +42,7 @@ public class Simulation {
         long tempsDebut, tempsFin;
         tempsDebut = System.currentTimeMillis();
         int nbrIt = 0;
-        SimpleDateFormat formater = new SimpleDateFormat("mm:ss.SSS");;
+        SimpleDateFormat formater = new SimpleDateFormat("mm:ss.SSS");
 
         while(!this.nextround){
             nextRound();
