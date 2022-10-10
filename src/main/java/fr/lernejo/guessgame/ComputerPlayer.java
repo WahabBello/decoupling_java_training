@@ -9,7 +9,7 @@ public class ComputerPlayer implements Player{
     @Override
     public long askNextGuess() {
         SecureRandom random = new SecureRandom();
-        long chosen_number = random.nextLong(20, 100);
+        long chosen_number = random.nextLong(20, 80);
         return chosen_number;
     }
 

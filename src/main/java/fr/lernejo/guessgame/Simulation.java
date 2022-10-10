@@ -26,7 +26,7 @@ public class Simulation {
      */
     private boolean nextRound() {
         long chosen_number = player.askNextGuess();
-//        System.out.print(this.numberToGuess);
+        // System.out.print(this.numberToGuess);
         if (this.numberToGuess == chosen_number) {
             logger.log("bravo \n");
             this.nextround = true;
@@ -38,10 +38,10 @@ public class Simulation {
         return false;
     }
 
-    public void loopUntilPlayerSucceed(int nbrItMax) {
-        long tempsDebut, tempsFin;
+    public void loopUntilPlayerSucceed(long nbrItMax) {
+        long nbrIt, tempsDebut, tempsFin;
         tempsDebut = System.currentTimeMillis();
-        int nbrIt = 0;
+        nbrIt = 0;
         SimpleDateFormat formater = new SimpleDateFormat("mm:ss.SSS");
 
         while(!this.nextround){
@@ -58,7 +58,6 @@ public class Simulation {
         }else {
             logger.log("Nombre de tentatives dépassées \n");
         }
-
         logger.log("Temps de l'opération = "+ formater.format(seconds) + " secondes.\n");
 
     }
